@@ -46,7 +46,7 @@ var score = 0; // aantal behaalde punten
  * Tekent het speelveld
  */
 var tekenVeld = function () {
-  fill("purple");
+  fill("lightblue");
   rect(20, 20, width - 2 * 20, height - 2 * 20);
 };
 
@@ -57,8 +57,15 @@ var tekenVeld = function () {
  * @param {number} y y-coördinaat
  */
 var tekenVijand = function(x, y) {
-    
-
+  fill("lightgray")
+rect(95,85, 50, 50); /**robotlichaam */
+fill("gray")
+rect(105,55,30,30); /**robothoofd */
+   fill("white");
+  ellipse(120, 150, 100, 80); /**midden wolk */
+  ellipse(150, 150, 80, 70); /**rechterkant wolk */
+  ellipse(90, 150, 80, 60);  /**linkerkant wolk */
+ 
 };
 
 
@@ -80,7 +87,7 @@ var tekenKogel = function(x, y) {
  */
 var tekenSpeler = function(x, y) {
   fill("white");
-  ellipse(x, y, 50, 50);
+  ellipse(400, 400, 50, 50);
 };
 
 
