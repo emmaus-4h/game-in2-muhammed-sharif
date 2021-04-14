@@ -28,8 +28,8 @@ var spelerY = 100; // y-positie van speler
 var kogelX = 0;    // x-positie van kogel
 var kogelY = 0;    // y-positie van kogel
 
-var vijandX = 0;   // x-positie van vijand
-var vijandY = 0;   // y-positie van vijand
+var vijandX = 200;   // x-positie van vijand
+var vijandY = 100;   // y-positie van vijand
 
 var score = 0; // aantal behaalde punten
 
@@ -58,13 +58,17 @@ var tekenVeld = function () {
  */
 var tekenVijand = function(x, y) {
   fill("lightgray")
-rect(95,85, 50, 50); /**robotlichaam */
+rect(x-105,y-15, 50, 50); /**robotlichaam */
 fill("gray")
-rect(105,55,30,30); /**robothoofd */
+
+rect(x-95,y-45,30,30); /**robothoofd */
    fill("white");
-  ellipse(120, 150, 100, 80); /**midden wolk */
-  ellipse(150, 150, 80, 70); /**rechterkant wolk */
-  ellipse(90, 150, 80, 60);  /**linkerkant wolk */
+
+  ellipse(x-80, y+50, 100, 80); /**midden wolk */
+
+  ellipse(x-50, y+50, 80, 70); /**rechterkant wolk */
+
+  ellipse(x-110, y+50, 80, 60);  /**linkerkant wolk */
  
 };
 
@@ -103,7 +107,7 @@ var tekenSpeler = function(x, y) {
 /**
  * Updatet globale variabelen met positie van vijand of tegenspeler
  */
-var beweegVijand = function() {
+var beweegVijand = function () {
     
 };
 
