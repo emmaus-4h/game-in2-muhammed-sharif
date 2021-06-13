@@ -46,8 +46,36 @@ var score = 0; // aantal behaalde punten
  * Tekent het speelveld
  */
 var tekenVeld = function () {
-  fill("lightblue");
-  rect(20, 20, width - 2 * 20, height - 2 * 20);
+  fill("green");
+  rect(0, 600, width - 1 * 1, height - 2 * 20); /*gras*/
+
+  fill("brown")
+  rect(0,625, width - 1 * 1, height - 2 * 20) /*aarde onder gras*/
+  
+  /* bomen genummerd van links naar rechts */
+  fill("brown")                       /*1*/
+  rect(100, 600, 40, -200)
+  fill("green")
+  ellipse(125, 400, 200, 200)
+
+  fill("brown")                      /*2*/
+  rect(500, 600, 40, -200)
+  fill("green")
+  rect(425, 300, 200, 200)
+
+  fill("brown")                     /*3*/
+  rect(1075, 600, 40, -200)
+  fill("green")
+  ellipse(1100, 400, 200, 200)
+
+
+fill("darkgreen")
+ellipse(225,575, 15 -80)
+fill("darkgreen")
+ellipse(200,585, 40 -90)
+fill("darkgreen")
+ellipse(245,585, 40 -90)
+
 };
 
 
@@ -170,7 +198,7 @@ function setup() {
   createCanvas(1280, 720);
 
   // Kleur de achtergrond blauw, zodat je het kunt zien
-  background('blue');
+  background('lightblue');
 }
 
 
